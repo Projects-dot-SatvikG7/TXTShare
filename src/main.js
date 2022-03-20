@@ -2,6 +2,7 @@ import "./styles.css"
 const root = document.querySelector("#app");
 root.innerHTML = `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
   <div class="container-fluid">
     <a id="brand" class="navbar-brand" href="/">📝 TXTShare </a>
     <div class="d-flex justify-content-end" id="navbarSupportedContent">
@@ -10,21 +11,23 @@ root.innerHTML = `
       <button id="sob" hidden="true" class="btn btn-primary mx-2 py-0">Sign Out</button>
     </div>
   </div>
+
 </nav>
 
 <main>
+
 <section id="so" hidden="false">
   <h1>Sign in to continue</h1>
 </section>
 
 <section id="si" hidden="true">
   <div id="ud"></div>
-  <div id="data"></div>
+  <div id="data" hidden="true"></div>
   <div id="ig" class="input-group">
     <textarea id="newData" class="form-control" aria-label="Save Text"></textarea>
     <span id="addData" class="btn btn-success d-flex align-items-center">Save Text</span>
   </div>
 </section>
-</main>
 
+</main>
 `;

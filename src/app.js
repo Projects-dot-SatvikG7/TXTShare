@@ -59,6 +59,7 @@ window.addEventListener("load", async () => {
     docRef = doc;
     console.log(`${doc.id} => ${doc.data().data}`);
     data.innerText = doc.data().data;
+    data.hidden = false;
   });
 
   addDataBtn.addEventListener("click", async () => {

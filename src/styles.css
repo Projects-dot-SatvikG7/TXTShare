@@ -139,3 +139,19 @@ background: var(--nav-bg);
     border: 4px dotted yellow;
     border-radius: 15px;
 }
+
+/* media frame */
+@media screen and (max-width: 480px) {
+    #brand{
+      font-size: 1.25rem;
+      padding: 10px;
+    }
+    #sib{
+      font-size: 0.75rem;
+      padding: 10px 5px;
+    }
+    #sob{
+      font-size: 0.75rem;
+      padding: 10px 5px;
+    }
+}
