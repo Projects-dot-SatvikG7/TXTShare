@@ -114,6 +114,7 @@ background: var(--nav-bg);
 #newData {
     background-color: var(--gray4);
     color: var(--text-color-light);
+    margin-right: 5px !important;
 }
 
 #ig{
