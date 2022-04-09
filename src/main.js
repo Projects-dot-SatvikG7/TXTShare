@@ -6,9 +6,9 @@ root.innerHTML = `
   <div class="container-fluid">
     <a id="brand" class="navbar-brand" href="/">📝 TXTShare </a>
     <div class="d-flex justify-content-end" id="navbarSupportedContent">
-      <button id="sib" class="btn btn-primary">Sign in with Google</button>
-      <img id="profile_pic" src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="user_profile_pic">
-      <button id="sob" class="btn btn-primary mx-2 py-0">Sign Out</button>
+      <button  id="sib" class="btn btn-primary">Sign in with Google</button>
+      <img   id="profile_pic" src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="user_profile_pic">
+      <button  id="sob" class="btn btn-primary mx-2 py-0">Sign Out</button>
     </div>
   </div>
 
@@ -16,11 +16,11 @@ root.innerHTML = `
 
 <main>
 
-<section id="so" >
+<section hidden id="so" >
   <h1>Sign in to continue</h1>
 </section>
 
-<section id="si" >
+<section hidden id="si" >
   <div id="ud"></div>
   <div id="data"></div>
   <div id="ig" class="input-group">

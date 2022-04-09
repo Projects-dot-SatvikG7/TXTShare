@@ -1,114 +1,110 @@
 :root {
-  --pink: #ff4088;
-  --pink-dark: #ff1c72;
-  --pink-light: #ff649e;
-  --red: #ff3860;
-  --red-dark: #ff1443;
-  --red-light: #ff5c7c;
-  --blue: #498afb;
-  --blue-dark: #2674fa;
-  --blue-light: #6ca0fc;
-  --orange: #fa8142;
-  --orange-dark: #f96a1f;
-  --orange-light: #fb9865;
-  --green: #09c372;
-  --green-dark: #07a15e;
-  --green-light: #0be586;
-  --purple: #9166cc;
-  --purple-dark: #7d4bc3;
-  --purple-light: #a481d5;
-  --gray0: #f8f8f8;
-  --gray1: #dbe1e8;
-  --gray2: #b2becd;
-  --gray3: #6c7983;
-  --gray4: #454e56;
-  --gray5: #2a2e35;
-  --gray6: #12181b;
-  --nav-bg: var(--gray5);
-  --text-color: var(--gray2);
-  --text-color-light: var(--gray1);
-  --font-body: "Cascadia Code", monospace;
-  --card-shadow:0 4px 8px rgba(0,30,84,0.12);
-  background-color: var(--gray5);
+    --pink: #ff4088;
+    --pink-dark: #ff1c72;
+    --pink-light: #ff649e;
+    --red: #ff3860;
+    --red-dark: #ff1443;
+    --red-light: #ff5c7c;
+    --blue: #498afb;
+    --blue-dark: #2674fa;
+    --blue-light: #6ca0fc;
+    --orange: #fa8142;
+    --orange-dark: #f96a1f;
+    --orange-light: #fb9865;
+    --green: #09c372;
+    --green-dark: #07a15e;
+    --green-light: #0be586;
+    --purple: #9166cc;
+    --purple-dark: #7d4bc3;
+    --purple-light: #a481d5;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --nav-bg: var(--gray5);
+    --text-color: var(--gray2);
+    --text-color-light: var(--gray1);
+    --font-body: "Cascadia Code", monospace;
+
+    --card-shadow: 6px 6px teal;
+    --card-border: 2px solid lime;
+    --card-margin: 0.5em 0.25em 0.5em 0;
+    --card-padding: 1em 1em;
+    --card-translate: translate(-2px, -2px);
+    --card-transition: all 0.4s ease;
+    background-color: var(--gray5);
 }
-main{
+
+main {
     background-color: var(--gray5);
     color: var(--text-color);
     padding: 20px;
 }
+
 #brand {
-  color: #12181b;
-  font-size: 1.75rem;
-  background-image: linear-gradient(90deg, var(--orange), var(--pink));
-  padding: 0 4px;
-  border-radius: 3px;
+    color: #12181b;
+    font-size: 2rem;
+    background-image: linear-gradient(90deg, var(--orange), var(--pink));
+    padding: 0 4px;
+    border-radius: 3px;
 }
 
-#profile_pic{
-    width: 50px;
-    height: 50px;
-    border: 4px dashed var(--green-light);
-    border-radius: 25px;
+#profile_pic {
+    width: 75px;
+    height: 75px;
+    margin: 0 20px;
+    border: var(--card-border);
+    border-radius: 50%;
+    transition: .4s ease;
+}
+
+#profile_pic:hover {
+    transform: var(--card-translate);
+    box-shadow: var(--card-shadow);
+}
+
+#sib,
+#sob {
+    background: var(--nav-bg);
+    margin: var(--card-margin);
+    color: var(--text-color);
+    padding: var(--card-padding);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    vertical-align: bottom;
+    cursor: pointer;
+    transition: var(--card-transition);
 }
 
 #sib {
-background: var(--nav-bg);
-  margin: 0.25em 0.25em 0.25em 0;
-  color: var(--text-color);
-  font-size: 1rem;
-  border: 2px solid transparent;
-  padding: 1em 2em;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 3px;
-  vertical-align: bottom;
-  cursor: pointer;
-  background: var(--background);
-  border: 2px solid var(--green);
-  transition: background 0.4s ease;
+    border: 2px solid var(--green);
+}
+
+#sob {
+    border: 2px solid var(--orange);
 }
 
 #sib:hover {
     box-shadow: var(--card-shadow);
     background: var(--green);
     color: #fff;
-    transition: background .4s ease;
-    transform: translateY(-2px);
-}
-
-#sob {
-  background: var(--nav-bg);
-  margin: 0.25em 0.25em 0.25em 0;
-  color: var(--text-color);
-  font-size: 1rem;
-  border: 2px solid transparent;
-  padding: 1em 2em;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 3px;
-  vertical-align: bottom;
-  cursor: pointer;
-  background: var(--background);
-  border: 2px solid var(--orange);
-  transition: background 0.4s ease;
+    transform: var(--card-translate);
 }
 
 #sob:hover {
     box-shadow: var(--card-shadow);
     background: var(--orange);
     color: #fff;
-    transition: background .4s ease;
-    transform: translateY(-2px);
+    transform: var(--card-translate);
 }
 
 #newData {
@@ -117,42 +113,56 @@ background: var(--nav-bg);
     margin-right: 5px !important;
 }
 
-#ig{
-    margin: 20px 0;
-    padding: 0px 20px;
+#ig {
+    padding: 20px;
+    border-radius: 10px;
+    transition: var(--card-transition);
 }
 
-#ud{
-    padding: 0px 5px;
-    margin: 10px 20px;
-    border: 4px dotted yellow;
-    color: var(--text-color-light);
+#ig:focus-within {
+    background-color: var(--gray4);
+}
+
+
+
+#ud,
+#data {
+    margin: var(--card-margin);
+    padding: var(--card-padding);
     border-radius: 15px;
-    background-image: linear-gradient(-45deg, var(--orange-light), var(--pink-light));
-
-}
-#data{
-    margin: 10px 20px;
-    padding: 0px 5px;
-    font-size: 1.25rem;
     color: var(--text-color-light);
+    font-size: 1.2rem;
+    transition: var(--card-transition);
+}
+
+#ud {
+    background-image: linear-gradient(45deg, var(--pink-light), var(--orange-light));
+}
+
+#data {
     background-image: linear-gradient(45deg, var(--purple), var(--blue));
-    border: 4px dotted yellow;
-    border-radius: 15px;
+}
+
+#ud:hover,
+#data:hover {
+    box-shadow: var(--card-shadow);
+    transform: var(--card-translate);
 }
 
 /* media frame */
 @media screen and (max-width: 480px) {
-    #brand{
-      font-size: 1.25rem;
-      padding: 10px;
+    #brand {
+        font-size: 1.25rem;
+        padding: 10px;
     }
-    #sib{
-      font-size: 0.75rem;
-      padding: 10px 5px;
+
+    #sib {
+        font-size: 0.75rem;
+        padding: 10px 5px;
     }
-    #sob{
-      font-size: 0.75rem;
-      padding: 10px 5px;
+
+    #sob {
+        font-size: 0.75rem;
+        padding: 10px 5px;
     }
 }
