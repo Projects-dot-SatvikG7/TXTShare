@@ -3,6 +3,7 @@
  */
  const config = {
     build:{
+        base: "./",
         outDir: "public"
     }
   }
