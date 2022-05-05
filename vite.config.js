@@ -2,8 +2,8 @@
  * @type {import('vite').UserConfig}
  */
  const config = {
+    base: "./",
     build:{
-        base: "./",
         outDir: "public"
     }
   }
