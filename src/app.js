@@ -40,13 +40,13 @@ const fetchData = async (user) => {
     const docRef = doc(db, "texts", user.uid);
     setDoc(docRef, { id: user.uid }, { merge: true })
     const docSnap = await getDoc(docRef);
-
+    const TNC = `<a style="background: black;" href="/" >TXTShare</a> ("App") was just build as a utility for my personal use. Privacy of user was not taken into account while building this App. App does not use any kind of encryption over your text data ("Data"). Users are advised to refrain from pasting any sensitive Data in the app. Creator of the App will not be liable in case of breach of user's Data. By continuing the use of App the user will be subject to the terms, guidelines and policies of the App.`;
     if (docSnap.data().data) {
         $("#data").html(docSnap.data().data).show();
     } else {
-        setDoc(docRef, { data: "<a href=\"https://txt-share.web.app/\" >📝 TXTShare </a> (\"App\") is just a utility. Privacy of user was not taken into account while building this app. App does not use any kind of encryption over your text data (\"Data\"). Users are advised to refrain from pasting any sensitive Data in the app. Creator of the App will not be liable in case of breach of user's Data. By continuing the use of App the user will be subject to the terms, guidelines and policies of the App" }, { merge: true });
+        setDoc(docRef, { data: TNC }, { merge: true });
         $("#data")
-            .html("<a href=\"https://txt-share.web.app/\" >📝 TXTShare </a> (\"App\") is just a utility. Privacy of user was not taken into account while building this app. App does not use any kind of encryption over your text data (\"Data\"). Users are advised to refrain from pasting any sensitive Data in the app. Creator of the App will not be liable in case of breach of user's Data. By continuing the use of App the user will be subject to the terms, guidelines and policies of the App")
+            .html(TNC)
             .show();
     }
 
