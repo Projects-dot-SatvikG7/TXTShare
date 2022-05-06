@@ -44,9 +44,9 @@ const fetchData = async (user) => {
     if (docSnap.data().data) {
         $("#data").html(docSnap.data().data).show();
     } else {
-        setDoc(docRef, { data: "data" }, { merge: true });
+        setDoc(docRef, { data: "<a href=\"https://txt-share.web.app/\" >📝 TXTShare </a> (\"App\") is just a utility. Privacy of user was not taken into account while building this app. App does not use any kind of encryption over your text data (\"Data\"). Users are advised to refrain from pasting any sensitive Data in the app. Creator of the App will not be liable in case of breach of user's Data. By continuing the use of App the user will be subject to the terms, guidelines and policies of the App" }, { merge: true });
         $("#data")
-            .html("No text data available, add new data from the below textbox")
+            .html("<a href=\"https://txt-share.web.app/\" >📝 TXTShare </a> (\"App\") is just a utility. Privacy of user was not taken into account while building this app. App does not use any kind of encryption over your text data (\"Data\"). Users are advised to refrain from pasting any sensitive Data in the app. Creator of the App will not be liable in case of breach of user's Data. By continuing the use of App the user will be subject to the terms, guidelines and policies of the App")
             .show();
     }
 
@@ -54,11 +54,12 @@ const fetchData = async (user) => {
 
 const replaceDocData = async () => {
     const newData = $("#newData").val();
+    $("#newData").val("")
     updateDoc(doc(db, "texts", auth.currentUser.uid), { data: newData }, { merge: true });
     $("#data").html(newData).show();
 };
 
-$(function() {
+$(function () {
     $("#sob", "#profile_pic", "#ud").hide();
     $("#sib").show();
     $("#data").html("Fetching...")
@@ -91,13 +92,13 @@ $(function() {
         $("#loader").hide();
     });
 
-    $("#sib").click(function() {
+    $("#sib").click(function () {
         signInWithPopup(auth, provider);
     });
-    $("#sob").click(function() {
+    $("#sob").click(function () {
         signOut(auth);
     });
-    $("#addData").click(function() {
+    $("#addData").click(function () {
         if (!$("#newData").val()) {
             window.alert("Data cannot be empty");
             return
