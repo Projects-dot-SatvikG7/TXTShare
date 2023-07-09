@@ -27,6 +27,18 @@ root.innerHTML = `
     <textarea id="newData" class="form-control" aria-label="Save Text"></textarea>
     <span id="addData" class="btn btn-success d-flex align-items-center">Save Text</span>
   </div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6418689390281143"
+     crossorigin="anonymous"></script>
+  <!-- horizontal ad text data -->
+  <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-6418689390281143"
+      data-ad-slot="8693357864"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </section>
 
 </main>
