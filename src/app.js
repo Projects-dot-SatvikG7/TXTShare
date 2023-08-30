@@ -40,7 +40,7 @@ const fetchData = async (user) => {
     const docRef = doc(db, "texts", user.uid);
     setDoc(docRef, { id: user.uid }, { merge: true })
     const docSnap = await getDoc(docRef);
-    const TNC = `By using the app you accept the <a style="background: black;" href="/" >Privacy Policy</a>.`;
+    const TNC = `By using the app you accept the <a style="background: black;" href="/privacypolicy.html">Privacy Policy</a>.`;
     if (docSnap.data().data) {
         $("#data").html(docSnap.data().data).show();
     } else {
